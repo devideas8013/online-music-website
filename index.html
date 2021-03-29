@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="style.css">
+	<meta name="viewport" content="width=device-width , initial-scale=1">
+	<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+	<div class="main">
+		<div class="progress_bar" id="Bar"></div>
+		<img src="bgg.jpg" alt="" id="bg">
+		<div class="navbar">
+			<a href="#" id="logo"><i class='bx bxs-bar-chart-alt-2' ></i>&nbsp;Music</a>
+
+			<div class="nav_content">
+				<li><a href="#">Home</a></li>
+				<li><a href="#top_tracks">Tracks</a></li>
+				<li><a href="#user_comments">Comments</a></li>
+				<li><a href="#">Contact</a></li>
+				<li><a href="#">start for free</a></li>
+			</div>
+
+            <a onclick="menu_action()" id="menu_btn"><i class='bx bx-menu-alt-left'></i></a>
+			<div class="side_menu">
+				<li><a href="#"><i class='bx bx-category'></i></a></li>
+				<li><a href="#"><i class='bx bx-tv'></i></a></li>
+				<li><a href="#"><i class='bx bxs-movie-play'></i></a></li>
+				<li><a href="#"><i class='bx bxs-message-square-detail'></i></a></li>
+				<li><a href="#"><i class='bx bx-merge'></i></a></li>
+				<li><a href="#"><i class='bx bxs-cart-add'></i></a></li>
+			</div>
+		</div>
+
+		<div class="mid_part">
+            <img src="img.jpg" alt="">
+
+			<div class="description">
+				<p id="A_name">Alfred T</p>
+				<p>co-founder - Manager</p>
+				<br>
+				<p>It is a long established fact that a reader will be distracted <br> the readable content of a page when looking at layout.</p>
+                 <div class="buttons">
+                   <button><i class='bx bx-play'></i></button>
+				   <button><i class='bx bxs-like' ></i></button>
+				   <button><i class='bx bx-share-alt'></i></button>
+				   <button><i class='bx bx-bookmark-alt'></i></button>
+                 </div>
+
+			</div>
+		</div>
+
+		<div class="top_tracks" id="top_tracks">
+			<p id="heading"><i class='bx bxs-playlist'></i>&nbsp;&nbsp;Top Tracks</p>
+			<div id="track"></div>
+			
+			<div id="track">
+				<img src="profile.jpg" alt="">
+				<div id="actions">
+					<a href="#"><i class='bx bx-heart' ></i></a>
+					<a id="play_pause"><i class='bx bx-play'></i></a>
+				</div>
+
+				<audio src="songs/1.mp3" id="music"></audio>
+
+				<div id="song_desc">
+				   <p>dev ideas favourite song</p>
+				   <p>Devideas</p>
+				   <p id="message">New</p>
+				</div>
+				<div id="actions_2">
+				  <p><i class='bx bx-share-alt'></i></p>
+				  <p><i class='bx bxs-download' ></i></p>
+				</div>
+			</div>
+
+			<div id="track">
+				<img src="profile.jpg" alt="">
+				<div id="actions">
+					<a href="#"><i class='bx bx-heart' ></i></a>
+					<a id="play_pause"><i class='bx bx-play'></i></a>
+				</div>
+				<audio src="songs/2.mp3" id="music"></audio>
+
+				<div id="song_desc">
+					<p>dev ideas favourite song</p>
+				   <p>Devideas</p>
+				</div>
+
+				<div id="actions_2">
+				  <p><i class='bx bx-share-alt'></i></p>
+				  <p><i class='bx bxs-download' ></i></p>
+				</div>
+			</div>
+
+			<div id="track">
+				<img src="profile.jpg" alt="">
+				<div id="actions">
+					<a href="#"><i class='bx bx-heart' ></i></a>
+					<a id="play_pause"><i class='bx bx-play'></i></a>
+				</div>
+				<audio src="songs/3.mp3" id="music"></audio>
+
+				<div id="song_desc">
+					 <p>dev ideas favourite song</p>
+				     <p>Devideas</p>
+				</div>
+
+				<div id="actions_2">
+				  <p><i class='bx bx-share-alt'></i></p>
+				  <p><i class='bx bxs-download' ></i></p>
+				</div>
+			</div>
+
+			<div id="track">
+				<img src="profile.jpg" alt="">
+				<div id="actions">
+					<a href="#"><i class='bx bx-heart' ></i></a>
+					<a id="play_pause"><i class='bx bx-play'></i></a>
+				</div>
+				<audio src="songs/4.mp3" id="music"></audio>
+
+				<div id="song_desc">
+					 <p>dev ideas favourite song</p>
+				     <p>Devideas</p>
+				</div>
+
+				<div id="actions_2">
+				  <p><i class='bx bx-share-alt'></i></p>
+				  <p><i class='bx bxs-download' ></i></p>
+				</div>
+			</div>
+
+			<div id="track">
+				<img src="profile.jpg" alt="">
+				<div id="actions">
+					<a href="#"><i class='bx bx-heart' ></i></a>
+					<a id="play_pause"><i class='bx bx-play'></i></a>
+				</div>
+				<audio src="" id="music"></audio>
+
+				<div id="song_desc">
+					 <p>dev ideas favourite song</p>
+				     <p>Devideas</p>
+				</div>
+
+				<div id="actions_2">
+				  <p><i class='bx bx-share-alt'></i></p>
+				  <p><i class='bx bxs-download' ></i></p>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="user_comments" id="user_comments">
+			<p id="heading"><i class='bx bx-comment-detail'></i>&nbsp;&nbsp;Comments</p>
+            
+           <div class="comments">
+
+           	 <div class="comment">
+           	 	<div id="user_p">
+           	 		<p><i class='bx bxs-user'></i>&nbsp;karl rock</p>
+           	 		<p></p>
+           	 	</div>
+           	 	<div id="user_c">
+           	 		<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.The point of using Lorem Ipsum is that it has</p>
+           	 		<div id="social">
+           	 			<a><i class='bx bxl-facebook-circle' ></i></a>
+           	 			<a><i class='bx bxl-twitter' ></i></a>
+           	 		</div>
+           	 	</div>
+           	 </div>
+
+           	 <div class="comment">
+           	 	<div id="user_p">
+           	 		<p><i class='bx bxs-user'></i>&nbsp;karl rock</p>
+           	 		<p></p>
+           	 	</div>
+           	 	<div id="user_c">
+           	 		<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.The point of using Lorem Ipsum is that it has</p>
+           	 		<div id="social">
+           	 			<a><i class='bx bxl-facebook-circle' ></i></a>
+           	 			<a><i class='bx bxl-twitter' ></i></a>
+           	 		</div>
+           	 	</div>
+           	 </div>
+
+           	 <div class="comment">
+           	 	<div id="user_p">
+           	 		<p><i class='bx bxs-user'></i>&nbsp;karl rock</p>
+           	 		<p></p>
+           	 	</div>
+           	 	<div id="user_c">
+           	 		<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.The point of using Lorem Ipsum is that it has</p>
+           	 		<div id="social">
+           	 			<a><i class='bx bxl-facebook-circle' ></i></a>
+           	 			<a><i class='bx bxl-twitter' ></i></a>
+           	 		</div>
+           	 	</div>
+           	 </div>
+
+           	<div class="comment">
+           	 	<div id="user_p">
+           	 		<p><i class='bx bxs-user'></i>&nbsp;karl rock</p>
+           	 		<p></p>
+           	 	</div>
+           	 	<div id="user_c">
+           	 		<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.The point of using Lorem Ipsum is that it has</p>
+           	 		<div id="social">
+           	 			<a><i class='bx bxl-facebook-circle' ></i></a>
+           	 			<a><i class='bx bxl-twitter' ></i></a>
+           	 		</div>
+           	 	</div>
+           	 </div>
+
+           </div>
+
+		</div>
+
+		<div class="footer">
+			
+		</div>
+	</div>
+
+ <script src="main.js"></script>
+</body>
+</html>
