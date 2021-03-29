@@ -39,22 +39,11 @@ body{
 	width: 100%;
 	height: 100px;
 	background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
-	z-index: 100;
+	z-index: 10;
 }
-/*.main:after{
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: #CCCCFF;
-	mix-blend-mode: color;
-	z-index: 100;
-}*/
 .navbar{
 	position: relative;
-	z-index: 200000;
+	z-index: 100;
 	height: 55px;
 	width: 100%;
 	padding: 0 15px;
@@ -75,10 +64,9 @@ body{
 	margin-top: 7em;
 	min-height: 220px;
 	width: 85%;
-	z-index: 200000;
+	z-index: 10;
 	display: flex;
 	align-content: center;
-	border: 1px solid #fff;
 	overflow: hidden;
 }
 .mid_part img{
@@ -86,6 +74,10 @@ body{
 }
 .description{
 	padding: 10px;
+}
+.description .author_desc{
+	width: 20em;
+    word-break: break-all;
 }
 .description p{
 	color: rgba(255,255,255,0.5);
@@ -109,12 +101,13 @@ body{
     border: none;
     background: #E91E63;
     color: #fff;
+
 }
 .description .buttons button:not(:first-child){
 	margin-left: 0.5em;
 	background: none;
-	border: 1px solid #fff;
 	color: #fff;
+	border: 1px solid rgba(255,255,255,0.08);
 }
 .description .buttons a{
 	text-decoration: none;
@@ -159,7 +152,7 @@ body{
 	display: flex;
 	align-items: center;
 	cursor: pointer;
-	z-index: 1000000000;
+	z-index: 100;
     background: rgba(255,255,255,0.09);
 }
 
@@ -172,7 +165,7 @@ body{
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	background: rgba(255,255,255,0.04);
+	background: rgba(255,255,255,0.06);
 	left: 0;
 	top: 56px;
 	padding: 7px 5px;
@@ -202,7 +195,7 @@ body{
 	margin-top: 10em;
 	min-height: 220px;
 	width: 85%;
-	z-index: 200000;
+	z-index: 10;
 	display: flex;
 	flex-direction: column;
 }
@@ -232,8 +225,8 @@ body{
 	color: #fff;
 }
 #actions{
-	padding-left: 5%; 
-	min-width: 20%;
+	padding: 0 5px;
+	min-width: 5%;
 	display: flex;
 	align-items: center;
 /*	border: 1px solid #fff;*/
@@ -245,11 +238,14 @@ body{
 	display: flex;
 	justify-content: right;
 }
+#actions_2 a{
+    color: #fff;
+}
 #actions_2 p{
 	font-size: 1.2em;
 }
 #actions_2 p:first-child{
-	margin-right: 10px;
+	margin-right: 12px;
 }
 #actions i{
 	cursor: pointer;
@@ -266,6 +262,7 @@ body{
 }
 .top_tracks #actions a:first-child{
 	font-size: 1.5em;
+	margin-left: 10px;
 }
 #actions i:hover{
 	color: #E91E63;
@@ -277,7 +274,7 @@ body{
   height: 4px;
   background: linear-gradient(to right, #cc33ff 0%, #ff0066 100%);
   width: 0%;
-  z-index: 100000000;
+  z-index: 100;
 }
 
 /*comments*/
@@ -285,7 +282,7 @@ body{
 	margin-top: 5em;
 	min-height: 200px;
 	width: 85%;
-	z-index: 200000;
+	z-index: 10;
 	display: flex;
 	flex-direction: column;
 }
@@ -341,7 +338,7 @@ body{
 	margin-top: 5em;
 	height: 200px;
 	width: 85%;
-	z-index: 200000;
+	z-index: 10;
 	display: flex;
 	justify-content: space-between;
 	flex-direction: column;
@@ -353,14 +350,13 @@ body{
 #song_desc{
 	position: relative;
 	flex: 1;
-/*	border: 1px solid #fff;*/
 	padding-left: 10px;
 }
 #song_desc #message{
 	position: absolute;
 	bottom: 5px;
 	right: 2.5em;
-	color: #E91E63;
+	color: #EC407A;
 }
 #song_desc p:nth-child(1){
 	text-transform: capitalize;
@@ -388,7 +384,7 @@ body{
 		margin-top: 15px;
 	}
 	.comments .comment{
-		width: 95%;
+		width: 100%;
 	}
 	.description .buttons a{
 	   font-size: 1em;
@@ -413,6 +409,9 @@ body{
     .mid_part img{
        height: 200px;
      }
+     .description .author_desc{
+	   width: 15em;
+	}
 
 }
 @media(max-width: 500px){
@@ -420,8 +419,8 @@ body{
     	font-size: 0.9em;
     }
     .description .buttons button{
-    	font-size: 1.1em;
-    	padding: 4px 13px;
+    	font-size: 1.2em;
+    	padding: 5px 10px;
     }
     .description p{
     	font-size: 0.88em;
@@ -429,10 +428,10 @@ body{
     .mid_part img{
        height: 190px;
      }
-}
-@media(max-width: 400px){
-    .description .buttons button{
-    	font-size: 0.9em;
-    	padding: 3px 12px;
+    #actions a:first-child{
+	   display: none;
     }
+    .description .author_desc{
+	   width: 12em;
+	}
 }
