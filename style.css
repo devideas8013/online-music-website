@@ -41,24 +41,8 @@ body{
 	background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
 	z-index: 10;
 }
-.navbar{
-	position: relative;
-	z-index: 100;
-	height: 55px;
-	width: 100%;
-	padding: 0 15px;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	background: rgba(255,255,255,0.04);
-}
-.navbar #logo{
-	color: #fff;
-	font-size: 1.8em;
-	text-decoration: none;
-	cursor: pointer;
-	margin-left: 4em;
-}
+
+/*mid part*/
 .mid_part{
 	position: relative;
 	margin-top: 7em;
@@ -87,7 +71,7 @@ body{
     font-size: 3em;
     font-weight: bold;
 }
-.buttons{
+.description .buttons{
 	margin-top: 25px;
 	display: flex;
 	align-items: center;
@@ -114,8 +98,43 @@ body{
 	font-size: 2em;
 }
 
+/*menu button*/
+#menu_btn{
+    position: fixed;
+    top: 4px;
+    left: 4px;
+    display: inline-block;
+    font-size: 2em;
+	padding: 7px;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	z-index: 100;
+    background: rgba(0,0,0,0.9);
+}
+
 
 /*navbar*/
+.navbar{
+	position: relative;
+	z-index: 100;
+	height: 55px;
+	width: 100%;
+	padding: 0 15px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: rgba(255,255,255,0.03);
+}
+.navbar #logo{
+	color: #fff;
+	font-size: 1.8em;
+	text-decoration: none;
+	cursor: pointer;
+	margin-left: 4em;
+	font-family: cursive;
+}
 .nav_content{
     display: flex;
     justify-content: space-between;
@@ -141,23 +160,10 @@ body{
 	font-size: 1.1em;
 }
 
-#menu_btn{
-    position: fixed;
-    top: 4px;
-    left: 4px;
-    display: inline-block;
-    font-size: 2em;
-	padding: 7px;
-	color: #fff;
-	display: flex;
-	align-items: center;
-	cursor: pointer;
-	z-index: 100;
-    background: rgba(0,0,0,0.9);
-}
 
+/*side menu*/
 .side_menu{
-	transform: translateX(-50px);
+	transform: translateX(-60px);
 	transition: 0.5s;
 	width: 50px;
 	height: 100vh;
@@ -178,9 +184,6 @@ body{
 .side_menu li:not(:first-child){
 	margin: 10px 0;
 }
-/*.side_menu li:first-child{
-	margin-top: 70px;
-}*/
 .side_menu li:hover{
 	background:  #E91E63;
 }
@@ -190,7 +193,12 @@ body{
 	cursor: pointer;
 }
 
-/*top_tracks*/
+.side_nav_active{
+   transform: translateX(0);
+}
+
+
+/*top_tracks (songs)*/
 .top_tracks{
 	margin-top: 10em;
 	min-height: 220px;
@@ -198,10 +206,6 @@ body{
 	z-index: 10;
 	display: flex;
 	flex-direction: column;
-}
-#heading{
-	color: #fff;
-	font-size: 1.8em;
 }
 .top_tracks #track{
 	position: relative;
@@ -220,6 +224,7 @@ body{
 .top_tracks #track img{
 	height: 50px;
 	width: 50px;
+	object-fit: cover;
 }
 .top_tracks #track p{
 	color: #fff;
@@ -229,23 +234,6 @@ body{
 	min-width: 5%;
 	display: flex;
 	align-items: center;
-/*	border: 1px solid #fff;*/
-}
-#actions_2{
-	min-width: 5%;
-	padding: 3px;
-/*	border: 1px solid #fff;*/
-	display: flex;
-	justify-content: right;
-}
-#actions_2 a{
-    color: #fff;
-}
-#actions_2 p{
-	font-size: 1.2em;
-}
-#actions_2 p:first-child{
-	margin-right: 12px;
 }
 #actions i{
 	cursor: pointer;
@@ -267,6 +255,58 @@ body{
 #actions i:hover{
 	color: #E91E63;
 }
+/*song description part*/
+#song_desc{
+	position: relative;
+	flex: 1;
+	padding-left: 10px;
+}
+#song_desc #message{
+	position: absolute;
+	bottom: 5px;
+	right: 2.5em;
+	color: #EC407A;
+}
+#song_desc #total_download{
+	position: absolute;
+	bottom: 10px;
+	right: 22%;
+	color: #EC407A;
+}
+#song_desc p:nth-child(1){
+	text-transform: capitalize;
+}
+#song_desc p:nth-child(2){
+	opacity: 0.6;
+	margin-top: 5px;
+	font-size: 0.9em;
+}
+
+/*all id ~ heading*/
+#heading{
+	color: #fff;
+	font-size: 1.8em;
+	font-family: cursive;
+}
+
+/*actions_2 (share & download button)*/
+#actions_2{
+	min-width: 5%;
+	padding: 3px;
+	display: flex;
+	justify-content: right;
+}
+#actions_2 a{
+    color: #fff;
+}
+#actions_2 p{
+	font-size: 1.2em;
+}
+#actions_2 p:first-child{
+	margin-right: 12px;
+}
+
+/*top progress bar*/
 .progress_bar {
   position: fixed;
   top: 0;
@@ -277,7 +317,8 @@ body{
   z-index: 100;
 }
 
-/*comments*/
+
+/*user comments*/
 .user_comments{
 	margin-top: 5em;
 	min-height: 200px;
@@ -333,6 +374,16 @@ body{
 	letter-spacing: 1px;
 }
 
+/*scroll bar style*/
+::-webkit-scrollbar {
+	height: 8px;
+    width: 7px;
+}
+::-webkit-scrollbar-thumb {
+	background: linear-gradient(to right ,transparent, #EC407A);
+	border-radius: 5px;
+}
+
 /*popular_creator*/
 .popular_creator{
 	margin: 5em 0;
@@ -349,14 +400,6 @@ body{
 	width: 100%;
 	height: 200px;
 	overflow-x: scroll;
-}
-::-webkit-scrollbar {
-	height: 8px;
-    width: 7px;
-}
-::-webkit-scrollbar-thumb {
-	background: linear-gradient(to right ,transparent, #EC407A);
-	border-radius: 5px;
 }
 .artist{
 	position: relative;
@@ -397,37 +440,7 @@ body{
 	object-fit: cover;
 }
 
-
-
-.side_nav_active{
-   transform: translateX(0);
-}
-#song_desc{
-	position: relative;
-	flex: 1;
-	padding-left: 10px;
-}
-#song_desc #message{
-	position: absolute;
-	bottom: 5px;
-	right: 2.5em;
-	color: #EC407A;
-}
-#song_desc #total_download{
-	position: absolute;
-	bottom: 10px;
-	right: 22%;
-	color: #EC407A;
-}
-#song_desc p:nth-child(1){
-	text-transform: capitalize;
-}
-#song_desc p:nth-child(2){
-	opacity: 0.6;
-	margin-top: 5px;
-	font-size: 0.9em;
-}
-
+/*footer*/
 .footer{
     margin: 0.7em 0;
 	width: 85%;
@@ -445,13 +458,18 @@ body{
 .footer #logo{
     color: #fff;
     font-size: 1.5em;
+    font-family: cursive;
 }
+
+
+/*down arrow icon (this arrow visible when screen size will be 700px)*/
 #responsive_menu{
 	font-size: 2em;
 	color: #fff;
 	display: none;
 }
 
+/*these codes will only execute when the screen size will be 700px*/
 @media(max-width: 700px){
 	#responsive_menu{
 	   display: block;
@@ -482,7 +500,7 @@ body{
     	padding: 5px 15px;
     }
     .description #A_name{
-    	font-size: 1.6em;
+    	font-size: 2em;
     }
     .mid_part{
     	height: 180px;
@@ -523,6 +541,8 @@ body{
     }
 
 }
+
+/* & these codes will execute when the screen size will be 500px*/
 @media(max-width: 500px){
     #song_desc p:nth-child(1){
     	font-size: 0.9em;
@@ -547,3 +567,6 @@ body{
 		padding-bottom: 25px;
 	}
 }
+/*finished 🤕*/
+
+/*by Dev Ideas*/
