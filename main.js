@@ -3,6 +3,7 @@ let song = document.querySelectorAll('#music');
 
 let song_index = 0;
 let song_status = 0;
+let index_no;
 
 btn.forEach((btn,index) => {
   btn.addEventListener('click', function(){
@@ -24,6 +25,8 @@ btn.forEach((btn,index) => {
   	if (song_status == 0) {
   		song[index].play();
   		song_status = 1;
+  		setInterval(update_second, 1000);
+  		index_no = index;
   		this.innerHTML = "<i class='bx bx-pause'></i>";
   	}else{
   		song[index].pause();
@@ -34,14 +37,25 @@ btn.forEach((btn,index) => {
   });
 });
 
-song.onended = function(){
-	this.innerHTML = "<i class='bx bx-pause'></i>";
-}
+/*This function will be execute in Every Second*/
+ function update_second(){
+	if (song[index_no].ended) {
+      btn[index_no].innerHTML = "<i class='bx bx-play'></i>";
+      clearInterval(update_second);
+    }
+ }
 
 
+/*side menu*/
 function menu_action(){
 	let side_nav = document.querySelector('.side_menu');
     side_nav.classList.toggle("side_nav_active");
+}
+
+/*main menu*/
+function open_close_menu(){
+	let nav_content = document.querySelector('.nav_content');
+    nav_content.classList.toggle("active_top_navbar");
 }
 
 
@@ -54,3 +68,5 @@ window.onscroll = () =>{
   var scrolled = (winScroll / height) * 100;
   document.getElementById("Bar").style.width = scrolled + "%";
 }
+
+/*by Dev Ideas*/
